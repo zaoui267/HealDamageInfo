@@ -29,7 +29,7 @@ class ZHealDamageInfo extends PluginBase implements Listener
     public function onEnable()
     {
         Server::getInstance()->getPluginManager()->registerEvents($this,$this);
-        $this->getLogger()->notice("ZHealDamageInfo를 가동합니다. 이 플러그인은 이런 규칙을 지켜주지 않을시 강제로 사용을 중지시킵니다.\n첫째,접속 메세지를 지우지않는다.\n둘째,무단 공유를 하지않아야 하며 공유할시에는 제작자를 밝힌다.");
+        #$this->getLogger()->notice("ZHealDamageInfo를 가동합니다. 이 플러그인은 이런 규칙을 지켜주지 않을시 강제로 사용을 중지시킵니다.\n첫째,접속 메세지를 지우지않는다.\n둘째,무단 공유를 하지않아야 하며 공유할시에는 제작자를 밝힌다.");
     }
     public function onDamage(EntityDamageEvent $event)
     {
@@ -58,10 +58,9 @@ class ZHealDamageInfo extends PluginBase implements Listener
     }
     public function onJoin(PlayerJoinEvent $event)
     {
-        $event->getPlayer()->sendMessage("ZHealDamageInfo를 가동합니다. 이 플러그인은 이런 규칙을 지켜주지 않을시 강제로 사용을 중지시킵니다.\n첫째,접속 메세지를 지우지않는다.\n둘째,무단 공유를 하지않아야 하며 공유할시에는 제작자를 밝힌다.");
-        $event->getPlayer->addTitle("§aZHealDamageInfo","§b가동");
+        #$event->getPlayer()->sendMessage("ZHealDamageInfo를 가동합니다. 이 플러그인은 이런 규칙을 지켜주지 않을시 강제로 사용을 중지시킵니다.\n첫째,접속 메세지를 지우지않는다.\n둘째,무단 공유를 하지않아야 하며 공유할시에는 제작자를 밝힌다.");
+        #$event->getPlayer->addTitle("§aZHealDamageInfo","§b가동");
     }
-}
 
 class deleteParticleTask extends Task
 {
